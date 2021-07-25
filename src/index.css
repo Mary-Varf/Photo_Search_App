@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+  padding: 0 2rem;
+}
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+}
+.go-back-btn {
+  position: fixed;
+  bottom: 90px;
+}
+.author-img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.author-link {
+  padding-left: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card-content {
+  flex-grow: 1;
+}
+.go-back-btn {
+  position: fixed;
+  bottom: 75px;
+  left: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+.big-card-image {
+  position: relative;
+}
+.btn-like {
+  position: absolute;
+  bottom: -50px;
+  right: 50px;
+}
+
+.invisible {
+  display: none;
+}
+.add_btn {
+  margin: 0 auto;
+  display: flex;
+}
+.cursor {
+  cursor: pointer;
+}
+.like_icon {
+  margin-left: 5px;
+  display: none;
+}
+.l-show {
+  display: inline-block;
+  animation: likeBlock 0.5s linear forwards;
+}
+.d-l-show {
+  display: inline-block;
+  animation: disLikeBlock 0.5s linear forwards;
+}
+@keyframes likeBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes disLikeBlock {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (max-width: 800px) {
+  nav {
+    padding: 0 0.5rem;
+  }
+  nav .brand-logo {
+    font-size: 1.3rem;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+}
+#inputSearch {
+  margin-right: 30px;
+}
+
+input[type="text"]:focus {
+  color: white;
+}
+.search-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  #inputSearch {
+    display: block;
+    margin-right: 10px;
+  }
+  #mob-dn {
+    display: none;
+  }
+  #search {
+    width: 130px;
+  }
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  z-index: 100;
+}
+.content{
+  padding-top:80px;
+  min-height: (100% - 64px);
+}
+.card{
+  padding-top:80px;
+  min-height:(100% - 64px);
+}
