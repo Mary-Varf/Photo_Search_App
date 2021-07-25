@@ -1,4 +1,4 @@
-<h1 align='center'>Photo app</h1>
+<h1 align='center'>Photo Search App</h1>
 <a align='center' href='http://photoapp.iiwebdev.mcdir.ru/'>DEMO</a>
 
 ### Description
