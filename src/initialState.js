@@ -2,10 +2,11 @@ const initialState = {
     appReady: false,
     photoList: [],
     page: 2,
+    searchPage: 2,
     bigPhoto: {},
     likedID: [],
     justVisitedPhoto: {},
-    search: '',
+    searchReady: false,
 }
 
 export default initialState;

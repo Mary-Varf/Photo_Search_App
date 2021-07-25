@@ -1,10 +1,16 @@
 let inc_page = 2;
+let search_page = 2;
 const reducer = ( state = [], action ) => {
     switch (action.type) {
         case 'ADD_INITIAL_PAGE':
             return {
                 ...state,
                 appReady: action.appReady
+            }
+        case 'ADD_INITIAL_PAGE_SEARCH':
+            return {
+                ...state,
+                searchReady: action.searchReady
             }
         case 'ADD_PHOTOS':
             const newArr = [ ...state.photoList, ...action.photoList];
@@ -21,6 +27,11 @@ const reducer = ( state = [], action ) => {
             return {
                 ...state,
                 page: ++inc_page
+            }
+        case 'INC_SEARCH_PAGE':
+            return {
+                ...state,
+                searchPage: ++search_page
             }
         case 'SEARCH':
             return {

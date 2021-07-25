@@ -2,6 +2,10 @@ export const addInitialPage = (appReady) => ({
     type: 'ADD_INITIAL_PAGE',
     appReady
 })
+export const addInitialPageSearch = (searchReady) => ({
+    type: 'ADD_INITIAL_PAGE_SEARCH',
+    searchReady
+})
 export const addPhotos = (photoList) => ({
     type: 'ADD_PHOTOS',
     photoList
@@ -13,6 +17,10 @@ export const changePhoto = (photoList) => ({
 export const incPage = (page) => ({
     type: 'INC_PAGE',
     page
+})
+export const incSearchPage = (searchPage) => ({
+    type: 'INC_SEARCH_PAGE',
+    searchPage
 })
 export const searchImg = (search, photoList = []) => ({
     type: 'SEARCH',

@@ -1,12 +1,11 @@
-import { searchImg } from '../actions';
+import { addInitialPageSearch } from '../actions';
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 export const SearchForm = () => {
     const [ searchVal, setSearchVal ] = useState('');
-    const searchLine = '/main?query=' + searchVal.searchVal;
+    const searchLine = '/Search/SearchList/' + searchVal.searchVal;
     const dispatch = useDispatch();
     return (
         <div className="search" id='inputSearch'>
@@ -18,20 +17,19 @@ export const SearchForm = () => {
                     onChange={e => setSearchVal({searchVal: e.target.value})}
                     onKeyUp={e=> {
                         if (e.keyCode === 13) {
-                            dispatch(searchImg(searchVal.searchVal));
+                            dispatch(addInitialPageSearch(true));
+                            window.location.assign(searchLine)
                     }}}
                     onBlur={e => e.target.value = ''}
                 />
-                <Link to={searchLine}>
                     <i className="material-icons cursor" 
                         onClick={() => {
-                        console.log(searchVal.searchVal)
                             if (searchVal !== '') {
-                                dispatch(searchImg(searchVal.searchVal));
+                                dispatch(addInitialPageSearch(true));
+                                window.location.assign(searchLine)
                             }
                         }} >search
-                    </i>  
-                </Link>             
+                    </i>           
                 <div className="search-results"></div>
             </div>
         </div>

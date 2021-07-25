@@ -1,12 +1,9 @@
 import Unsplash from 'unsplash-js';
 
 export const unsplash = new Unsplash({
-    applicationId: 'nK0MVSY1oJWReIAjtEloARCiki6HBCBhYjeIsSQpG1E',
-    secret: '_9jN-OJhakhdlJtGmZiLzZMqGIQilcmpP8Vg26Xd8i4',
-    callbackUrl: 'http://localhost:3000/main',
-    // applicationId: 'pxeBRqYL6hfgv0exWRY7rY9t_cDXcRjMYGnnVxE8Uzs',
-    // secret: 'MNW1yI1m4nvyWLa_q459kzuCb55FMDV8ErzVO1v2SSU',
-    // callbackUrl: 'https://iiwebdev.mcdir.ru/main',
+    applicationId: 'pxeBRqYL6hfgv0exWRY7rY9t_cDXcRjMYGnnVxE8Uzs',
+    secret: 'MNW1yI1m4nvyWLa_q459kzuCb55FMDV8ErzVO1v2SSU',
+    callbackUrl: 'http://photoapp.iiwebdev.mcdir.ru/main',
 });
 
 export const authentification = () => {
@@ -17,21 +14,20 @@ export const authentification = () => {
     window.location.assign(authenticationUrl);
 }
 
-export const getPhotoList = (search = '', page) => {
-    if (search === '') {
-        return unsplash.photos
-            .listPhotos(page)
-            .then(response=> response.json())
-    } else{
-        return unsplash.search.photos(search, page)
-            .then(response=> response.json())
-    }
+export const getPhotoList = (page) => {
+    return unsplash.photos
+        .listPhotos(page)
+        .then(response=> response.json())
 }
 export const getPhotoById = async (id) => {
     return unsplash.photos
         .getPhoto(id)
         .then(response=> response.json())
 };
+export const getSearchImgs = (search, page) => {
+    return unsplash.search.photos(search, page)
+        .then(response=> response.json())
+}
 
 const code = window.location.search.split('code=')[1];
 if (code) {
