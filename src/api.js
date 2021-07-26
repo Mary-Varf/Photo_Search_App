@@ -3,7 +3,7 @@ import Unsplash from 'unsplash-js';
 export const unsplash = new Unsplash({
     applicationId: 'pxeBRqYL6hfgv0exWRY7rY9t_cDXcRjMYGnnVxE8Uzs',
     secret: 'MNW1yI1m4nvyWLa_q459kzuCb55FMDV8ErzVO1v2SSU',
-    callbackUrl: 'http://photoapp.iiwebdev.mcdir.ru/main',
+    callbackUrl: 'https://iiwebdev.mcdir.ru/main',    
 });
 
 export const authentification = () => {
