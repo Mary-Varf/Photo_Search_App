@@ -7,23 +7,26 @@ import BigPhotoMain from './page/BigPhotoMain';
 import Search from './page/Search'
 import { About } from './page/About';
 import { NotFound } from './page/NotFound';
+import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 
 const App = () => {
     return <>
+        <BrowserRouter basename='/'>
         <Header />
         <main className="container content">
             <Switch>
                 <Route exact path="/" component={Home}/>
-                <Route path="/main" component={Main}/>
-                <Route path="/about" component={About}/>
-                <Route path="/BigPhotoMain/BigPhoto/:id" component={BigPhotoMain}/>
-                <Route path="/Search/SearchList/:query" component={Search}/>
+                <Route exact path="/main" component={Main}/>
+                <Route exact path="/about" component={About}/>
+                <Route exact path="/BigPhotoMain/BigPhoto/:id" component={BigPhotoMain}/>
+                <Route exact path="/Search/SearchList/:query" component={Search}/>
                 <Route component={NotFound}/>
             </Switch>
         </main>
         <Footer />
+        </BrowserRouter>
     </>
 }
 
