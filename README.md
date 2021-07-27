@@ -1,5 +1,5 @@
 <h1 align='center'>Photo Search App</h1>
-<a align='center' href='http://photoapp.iiwebdev.mcdir.ru/'>DEMO</a>
+<a align='center' href='https://iiwebdev.mcdir.ru/'>DEMO</a>
 
 ### Description
 Photo app is a simplified copy of Instagram based on Unsplash API, implemented on React Redux. 
