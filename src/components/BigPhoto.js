@@ -76,6 +76,7 @@ export const  BigPhoto = ({bigPhoto, likedID}) => {
             if (json.errors) {
                 errorAction(json.errors);
             } else {
+                console.log(json)
                 dispatch(decLikes( bigPhoto.likes, id));
                 justVisitedPhoto.likes = json.photo.likes;
                 dispatch(visitedPhoto(justVisitedPhoto));

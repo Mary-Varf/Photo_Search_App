@@ -1,6 +1,8 @@
 import Unsplash from 'unsplash-js';
 
 export const unsplash = new Unsplash({
+    // applicationId: 'vXeRsIcAlxmu2UHhRlsgWz0HIyvhjZ-jMEhgNHzWirE',
+    // secret: 'JgOoUe6xgMAgHOcLK3k0QIg_Tk-vYOvkGHxgxnjlSn8',
     applicationId: 'pxeBRqYL6hfgv0exWRY7rY9t_cDXcRjMYGnnVxE8Uzs',
     secret: 'MNW1yI1m4nvyWLa_q459kzuCb55FMDV8ErzVO1v2SSU',
     callbackUrl: 'https://iiwebdev.mcdir.ru/main',    
