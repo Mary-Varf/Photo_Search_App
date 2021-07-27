@@ -61,7 +61,7 @@ export const  BigPhoto = ({bigPhoto, likedID}) => {
                     }
                 } else {
                     dispatch(incLikes(bigPhoto.likes, id));
-                    justVisitedPhoto.likes = bigPhoto.likes + 1;
+                    justVisitedPhoto.likes = json.photo.likes;
                     dispatch(visitedPhoto(justVisitedPhoto));
                 }
             }
@@ -77,7 +77,7 @@ export const  BigPhoto = ({bigPhoto, likedID}) => {
                 errorAction(json.errors);
             } else {
                 dispatch(decLikes( bigPhoto.likes, id));
-                justVisitedPhoto.likes = bigPhoto.likes - 1;
+                justVisitedPhoto.likes = json.photo.likes;
                 dispatch(visitedPhoto(justVisitedPhoto));
             }
         });
